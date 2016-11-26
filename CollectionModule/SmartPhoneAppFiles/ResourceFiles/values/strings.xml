@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Memotion</string>
+    <string name="rate_screen">Log Current Mood</string>
+    <string name="review_screen">Do Daily Review</string>
+    <string name="title_activity_rate">RateActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_review">ReviewActivity</string>
+
+</resources>

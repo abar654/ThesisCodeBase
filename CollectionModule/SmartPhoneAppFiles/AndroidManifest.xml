@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.emotionsense.demo.data"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="25" />
+
+    <!-- For data written to files -->
+    <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />- -->
+
+
+    <!-- For any transfers -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- For async transfers -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>
+
+    <application
+        android:name=".DemoApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".RateActivity"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".ReviewActivity"
+            android:parentActivityName=".MainActivity"/>
+        <service
+            android:name=".RateNotificationService" />
+        <service
+            android:name=".ReviewNotificationService" />
+        <service
+            android:name=".AlarmStopper" />
+        <service
+            android:name=".SenseService" />
+        <service
+            android:name=".ComLogService" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBhq6UJIksxH5-f8ZTtUYfHK4jgeRWfIW4"/>
+    </application>
+
+</manifest>
